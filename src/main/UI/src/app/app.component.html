@@ -6,6 +6,16 @@
       <p><a href="/#welcome"><img src="assets/images/arrow.png" alt="down arrow"></a></p>
     </div>
   </article>
+
+  <!-- Multithreaded Welcome Messages Section -->
+  <div class="row" style="margin: 20px 0; text-align: center;" *ngIf="welcomeMessages.length > 0">
+    <div class="col-12">
+      <h3 *ngFor="let msg of welcomeMessages" style="font-size: 22px; font-weight: bold; color: #fff; margin: 8px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+        {{ msg }}
+      </h3>
+    </div>
+  </div>
+
   <div class="row" style="margin: 20px 0; text-align: center;">
     <div class="col-12">
       <h3>Live Presentation Schedule:</h3>
@@ -79,8 +89,8 @@
                 <td>
                   <strong>Room #: {{room.roomNumber}}</strong><br/>
                   <strong>USD: ${{room.price}}</strong><br/>
-                  <strong>CAD: C${{+room.price * 1.35}}</strong><br/>
-                  <strong>EUR: €{{+room.price * 0.92}}</strong>
+                  <strong>CAD: C${{ (+room.price * 1.35).toFixed(2) }}</strong><br/>
+                  <strong>EUR: €{{ (+room.price * 0.92).toFixed(2) }}</strong>
                 </td>
                 <td>
                   <button type="button" class="btn btn-primary" (click)="reserveRoom(room.id)">Reserve</button>
@@ -162,7 +172,7 @@
       <h2>Landon Green Program</h2>
       <p><strong>The Landon Hotel - London</strong> was recently renovated, and we considered the impact on the earth
         the entire way. From green building materials, to solar power, to energy-friendly lighting and appliances
-        throughout the hotel - we’re saving energy in every socket, outlet, and switch. We’ve also initiated a recycling
+        throughout the hotel – we’re saving energy in every socket, outlet, and switch. We’ve also initiated a recycling
         and composting program that reduces the load to local landfills, while providing valuable raw material for use
         in new products, or in the case of compost, for use in local gardens and landscapes.</p>
     </article>

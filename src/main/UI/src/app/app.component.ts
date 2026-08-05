@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   rooms: Room[] = [];
   request!: ReserveRoomRequest;
   presentationTimes: string = '';
+  welcomeMessages: string[] = [];
 
   ngOnInit() {
     this.roomsearch = new FormGroup({
@@ -30,6 +31,13 @@ export class AppComponent implements OnInit {
       .subscribe({
         next: (data) => this.presentationTimes = data,
         error: (err) => console.error('Error fetching presentation times:', err)
+      });
+
+    // Fetch multithreaded welcome messages from the backend
+    this.httpClient.get<string[]>(this.baseURL + '/welcome')
+      .subscribe({
+        next: (data) => this.welcomeMessages = data,
+        error: (err) => console.error('Error fetching welcome messages:', err)
       });
   }
 

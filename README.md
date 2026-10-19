@@ -1,29 +1,26 @@
-<strong> **DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
+# International Working Capital Management Application
 
-# WESTERN GOVERNORS UNIVERSITY 
-## D387 – ADVANCED JAVA
-Welcome to Advanced Java! This is an opportunity for students to write multithreaded object-oriented code using Java frameworks and determine how to deploy software applications using cloud services.
+An enterprise-grade Java web application engineered to manage, convert, and monitor corporate working capital and asset distributions for an international workforce. This project demonstrates advanced backend architecture, multi-threaded task scheduling, runtime localization, and robust RESTful data exchange using the Spring ecosystem.
 
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this assessment, you will modify a Spring application with a Java back end and an Angular front end to include multithreaded language translation, a message at different time zones, and currency exchange. Then, build a Docker image of the current multithreaded Spring application and containerize it using the supporting documents provided in this task.
+## 🚀 Key Features
 
+* **Localization & Internationalization (I18n):** Implemented multi-lingual interface support enabling seamless runtime transitions between English, French, and Canadian French locales using native Java `ResourceBundle` handling and locale interceptors.
+* **Asynchronous Multi-Threading:** Configured thread-safe concurrent pipelines via Java's `ExecutorService` to simulate live, real-time asset market conversions and update cycles without blocking the primary application thread.
+* **RESTful Architecture:** Designed decoupled Spring MVC REST controller endpoints to handle properties data exchange, state synchronization, and structural configurations between the server and the view layer.
+* **Time-Zone Synchronization:** Programmed automated date and time translation logic to map and display sensitive asset updates relative to individual client geographic regional clusters.
 
-## SUPPLEMENTAL RESOURCES 
-1.	How to clone a project to IntelliJ using Git?
+## 🛠️ Tech Stack
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+* **Language:** Java 17+
+* **Framework:** Spring Boot, Spring MVC
+* **Build Automation:** Maven
+* **Frontend Rendering:** Thymeleaf, HTML5, CSS3, JavaScript
 
-2. How to create a branch and start Development?
+## 📁 Core Architecture Highlight
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+The application follows an enterprise-level tiered architecture designed for high scalability and separation of concerns:
+* `Controller Layer`: Manages REST endpoints, request routing, and localization data binding.
+* `Service Layer`: Handles the multi-threaded execution pools, transaction logic, and resource bundle processing.
+* `Model Layer`: Defines data contracts and localized property configurations.
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
-
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
 
